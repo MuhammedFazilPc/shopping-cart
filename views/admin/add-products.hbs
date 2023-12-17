@@ -1,0 +1,45 @@
+<section>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Add Product</h2>
+        <div class="row">
+            <div class="col">
+
+                <form action="/admin/add-products" method="post" enctype="multipart/form-data"> 
+
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" name="Name" class="form-control" id="formGroupExampleInput" placeholder="Name">
+
+
+                    <label for="formGroupExampleInput2">Type</label>
+                    <input type="text" name="Type" class="form-control" id="formGroupExampleInput2" placeholder="Type">
+
+
+                    <label for="formGroupExampleInput">Description</label>
+                    <input type="text" name="Description" class="form-control" id="formGroupExampleInput"
+                        placeholder="Description">
+
+
+                    <label for="formGroupExampleInput2">Price</label>
+                    <input type="text" name="Price" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Price">
+                    
+                    <img src="" alt="your chosen image will appear here" id="imageView"
+                        style="width: auto;height:100px"><br>
+
+                    <label for="formGroupExampleInput2">Image</label>
+                    <input type="file" name="image" class="form-control" id="formGroupExampleInput2"
+                        onchange="imageUpdate(event)" placeholder="ChooseFile"><br>
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
+    function imageUpdate(event) {
+        document.getElementById('imageView').src = URL.createObjectURL(event.target.files[0])
+    }
+</script>

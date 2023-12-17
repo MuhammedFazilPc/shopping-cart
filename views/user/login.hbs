@@ -1,0 +1,30 @@
+<section>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Log In</h2>
+                <form action="/login" method="post">
+
+                    {{#if loginErr}}
+                    <small id="emailHelp" class="form-text text-muted">Invalid Email or Password</small><br>
+                    {{/if}}
+                    <label for="exampleInputEmail1">Email address</label><br>
+                    <input type="email" class="form-control" name='Email' id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small><br>
+
+                    <label for="formGroupExampleInput">Password</label>
+                    <input type="text" name="Password" class="form-control" id="formGroupExampleInput"
+                        placeholder="Password">
+                    <small id="emailHelp" class="form-text text-muted">Don't have account?</small>
+                    <a href="/signup">Sign up</a>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

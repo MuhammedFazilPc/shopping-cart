@@ -1,0 +1,34 @@
+<section>
+
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Sign up</h2>
+                <form action="/signup" method="post">
+                  {{#if signupErr}}
+                    <small id="emailHelp" class="form-text text-muted">This Email is already registered</small><br>
+                    {{/if}}
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" name="Name" class="form-control" id="formGroupExampleInput"
+                        placeholder="Name"><br>
+
+                    <label for="exampleInputEmail1">Email address</label><br>
+                    <input type="email" class="form-control" name='Email' id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small><br>
+
+                    <label for="formGroupExampleInput">Password</label>
+                    <input type="text" name="Password" class="form-control" id="formGroupExampleInput"
+                        placeholder="Password">
+                    <small id="emailHelp" class="form-text text-muted">Already have accoount?</small>
+                    <a href="/login">Login</a>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

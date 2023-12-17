@@ -1,0 +1,49 @@
+<section>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Edit Products</h2>
+        <div class="row">
+            <div class="col">
+
+                <form action="/admin/edit/{{product._id}}" method="post" enctype="multipart/form-data">
+
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" name="Name" class="form-control" id="formGroupExampleInput"
+                        value="{{product.Name}}">
+
+
+                    <label for="formGroupExampleInput2">Type</label>
+                    <input type="text" name="Type" class="form-control" id="formGroupExampleInput2"
+                        value="{{product.Type}}">
+
+
+                    <label for="formGroupExampleInput">Description</label>
+                    <input type="text" name="Description" class="form-control" id="formGroupExampleInput"
+                        value="{{product.Description}}">
+
+
+                    <label for="formGroupExampleInput2">Price</label>
+                    <input type="text" name="Price" class="form-control" value="{{product.Price}}">
+
+                    <label for="formGroupExampleInput2">Image</label>
+                    <img src="/product-images/{{product._id}}.jpg" alt="product image" id="imageView"
+                        style="width: auto;height:100px"><br>
+
+                    <label for="formGroupExampleInput2">Image</label>
+                    <input type="file" name="image" class="form-control" id="formGroupExampleInput2"
+                        onchange="imageUpdate(event)" placeholder="ChooseFile"><br>
+
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    function imageUpdate(event) {
+        document.getElementById('imageView').src = URL.createObjectURL(event.target.files[0])
+    }
+</script>
